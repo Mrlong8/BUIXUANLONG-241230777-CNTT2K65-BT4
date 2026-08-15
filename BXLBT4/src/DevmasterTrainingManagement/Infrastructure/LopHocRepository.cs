@@ -35,5 +35,16 @@ namespace BXLBT4.src.DevmasterTrainingManagement.Infrastructure
             // nếu ko null trả về danhSachLopHoc còn null trả về  new List<LopHoc>();
         }
 
+        public void SaveData(List<LopHoc> danhSachLopHoc)
+        {
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            string json = JsonSerializer.Serialize(
+                danhSachLopHoc,options
+             );
+            File.WriteAllText(filePath, json);
+        }
     }
 }

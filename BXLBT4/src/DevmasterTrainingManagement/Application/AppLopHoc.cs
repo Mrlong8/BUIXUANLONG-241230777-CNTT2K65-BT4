@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Globalization;
 
 namespace BXLBT4.src.DevmasterTrainingManagement.Application
 {
@@ -18,9 +19,120 @@ namespace BXLBT4.src.DevmasterTrainingManagement.Application
             danhSachLopHoc = repository.LoadData();
         }
 
+        public void ThemLopHoc()
+        {
+            Console.WriteLine();
+            Console.WriteLine("========== THEM LOP HOC ==========");
+
+            Console.Write("Nhap ma Lop Hoc: ");
+            string MaLop = Console.ReadLine() ?? "";
+
+            Console.Write("Nhap Ten Lop : ");
+            string tenLop = Console.ReadLine() ?? "";
+
+            Console.Write("Nhap Khoa Hoc : ");
+            string KhoaHoc = Console.ReadLine() ?? "";
+
+            DateTime ngayKhaiGiang;
+
+            Console.Write("Nhap ngay khai giang (dd/MM/yyyy): ");
+
+            while (!DateTime.TryParse(
+                Console.ReadLine(),
+                out ngayKhaiGiang))
+            {
+                Console.Write("Ngay khong hop le, nhap lai: ");
+            }
+
+            Console.Write("Nhap Lich Hoc : ");
+            string lichHoc = Console.ReadLine() ?? "";
+
+            Console.Write("Nhap si so toi da: ");
+            int siSoToida;
+            //TryParse() nếu nhập số thì trả về true còn ko thì trả vef false
+            while (!int.TryParse(Console.ReadLine(), out siSoToida)
+                   || siSoToida <= 0)
+            {
+                Console.Write("Si so phai la so nguyen > 0. Nhap lai: ");
+            }
+
+            Console.Write("Nhap Trang Thai : ");
+            string TrangThai = Console.ReadLine() ?? "";
+
+            LopHoc lopHoc = new LopHoc(
+                MaLop,
+                tenLop,
+                KhoaHoc,
+                ngayKhaiGiang,
+                lichHoc,
+                siSoToida,
+                TrangThai
+
+            );
+            
+            danhSachLopHoc.Add(lopHoc);
+            repository.SaveData(danhSachLopHoc);
+            Console.WriteLine("Them lop thanh cong ");
+        }
+
+        public void CapNhatLop()
+        {
+            Console.WriteLine();
+            Console.WriteLine("========== CAP NHAT LOP ==========");
+
+            Console.WriteLine("Nhap ma lop hoc can sua : ");
+            string maLop = Console.ReadLine() ?? "";
+            LopHoc? lopHoc = danhSachLopHoc.FirstOrDefault(x => x.MaLop == maLop);
+
+            if (lopHoc == null)
+            {
+                Console.WriteLine("Khong tim thay hoc vien");
+                return;
+            }
+
+            Console.Write("Nhap Ten Lop Moi : ");
+            lopHoc.TenLop = Console.ReadLine() ?? "";
+
+            Console.Write("Nhap Khoa Hoc Moi : ");
+            lopHoc.KhoaHoc = Console.ReadLine() ?? "";
+
+            DateTime ngayKhaiGiang;
+
+            Console.Write("Nhap ngay khai giang moi (dd/MM/yyyy): ");
+
+            while (!DateTime.TryParse(
+                Console.ReadLine(),
+                out ngayKhaiGiang))
+            {
+                Console.Write("Ngay khong hop le, nhap lai: ");
+            }
+            lopHoc.NgayKhaiGiang = ngayKhaiGiang;
+
+            Console.Write("Nhap Lich Hoc moi : ");
+            lopHoc.LichHoc= Console.ReadLine() ?? "";
+
+            Console.Write("Nhap si so toi da moi: ");
+            int siSoToida;
+            //TryParse() nếu nhập số thì trả về true còn ko thì trả vef false
+            while (!int.TryParse(Console.ReadLine(), out siSoToida)
+                   || siSoToida <= 0)
+            {
+                Console.Write("Si so phai la so nguyen > 0. Nhap lai: ");
+            }
+            lopHoc.SiSoToiDa =siSoToida;
+
+            Console.Write("Nhap Trang Thai moi : ");
+            lopHoc.TrangThai = Console.ReadLine() ?? "";
+
+            repository.SaveData(danhSachLopHoc);
+            Console.WriteLine("Cap nhat lop hoc thanh cong");
+
+        }
+
         public List<LopHoc> GetDanhSachLopHoc()
         {
             return danhSachLopHoc;
         }
+        
     }
 }

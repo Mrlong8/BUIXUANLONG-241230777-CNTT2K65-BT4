@@ -32,7 +32,7 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI.Menus
             Console.WriteLine("|    4. Hien thi lop sap khai giang           |");
             Console.WriteLine("|    5. Hien thi lop dang hoc                 |");
             Console.WriteLine("|    6. Huy lop                               |");
-            Console.WriteLine("|    0. Thoat                    p.quay lai   |");
+            Console.WriteLine("|    0. Quay Lai                              |");
             Console.WriteLine("===============================================");
         }
         public void ShowMenuQLKH()

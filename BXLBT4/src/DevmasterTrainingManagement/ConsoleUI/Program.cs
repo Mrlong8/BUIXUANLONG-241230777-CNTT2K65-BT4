@@ -94,11 +94,15 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
                     case 2:
                         // Sửa học viên
                         appHocVien.SuaHocVien();
+                        viewhv.DisplayListHocVien(appHocVien.GetDanhSachHocVien());
+
                         break;
 
                     case 3:
                         // Xóa học viên
                         appHocVien.XoaHocVien();
+                        viewhv.DisplayListHocVien(appHocVien.GetDanhSachHocVien());
+
                         break;
 
                     case 4:
@@ -155,7 +159,7 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
 
             while (choose != 0)
             {
-                menu.ShowMenuQLKH();
+                menu.ShowMeNuQLLH();
 
                 Console.Write("Nhap lua chon: ");
 
@@ -168,7 +172,11 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
                 {
                     case 1:
                         // Thêm học viên
-                        //appLopHoc.ThemLopHhoc();
+                        appLopHoc.ThemLopHoc();
+                        viewlh.DisplayListLopHoc(appLopHoc.GetDanhSachLopHoc());
+                        break;
+                    case 2:
+                        appLopHoc.CapNhatLop();
                         viewlh.DisplayListLopHoc(appLopHoc.GetDanhSachLopHoc());
                         break;
 

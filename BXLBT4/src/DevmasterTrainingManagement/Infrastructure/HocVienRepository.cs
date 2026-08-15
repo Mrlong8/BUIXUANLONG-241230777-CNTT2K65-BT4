@@ -43,11 +43,14 @@ namespace BXLBT4.src.DevmasterTrainingManagement.Infrastructure
         }
         public void SaveData(List<HocVien> danhSachHocVien)
         {
+            //chuyển object thành JSON.
             JsonSerializerOptions options = new JsonSerializerOptions
             {
                 WriteIndented = true
+//JSON được format đẹp, xuống dòng và thụt đầu dòng.
             };
 
+            //List < HocVien > -> Serialize() -> string JSON
             string json = JsonSerializer.Serialize(
                 danhSachHocVien,
                 options
