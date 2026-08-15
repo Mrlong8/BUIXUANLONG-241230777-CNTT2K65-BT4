@@ -46,7 +46,7 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI.Menus
             Console.WriteLine("|    5. Sap xep khoa hoc                       |");
             Console.WriteLine("|    6. Loc theo trang thai                    |");
             Console.WriteLine("|    7. Thong ke hoc phi                       |");
-            Console.WriteLine("|    0. Thoat                    p.quay lai    |");
+            Console.WriteLine("|    0. Quay Lai                               |");
             Console.WriteLine("================================================");
         }
         public void ShowMenuQLHV()
@@ -80,7 +80,7 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI.Menus
             Console.WriteLine("|  5. Ghi nhan thanh toan                        |");
             Console.WriteLine("|  6. Huy dang ky                                |");
             Console.WriteLine("|  7. Thong ke cong no                           |");
-            Console.WriteLine("|  0. Thoat                      p. Quay lai     |");
+            Console.WriteLine("|  0. Quay Lai                                   |");
             Console.WriteLine("==================================================");
         }
         public void ShowMenuChamSocHocVien()

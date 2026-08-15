@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Globalization;
+using BXLBT4.src.DevmasterTrainingManagement.ConsoleUI.Views;
 
 namespace BXLBT4.src.DevmasterTrainingManagement.Application
 {
@@ -133,6 +134,91 @@ namespace BXLBT4.src.DevmasterTrainingManagement.Application
         {
             return danhSachLopHoc;
         }
-        
+
+        public void KiemTraSiSo()
+        {
+            Console.WriteLine("Nhap ma lop can kiem tra : ");
+            string makt = Console.ReadLine();
+            foreach (LopHoc item in danhSachLopHoc)
+            {
+                if (item.MaLop == makt)
+                {
+                    Console.WriteLine(" Si SO la : " + item.SiSoToiDa);
+                }
+            }
+
+           
+        }
+
+        public void HienThiLopSapKhaiGiang(LopHocView view)
+        {
+
+            bool timThay = false;
+
+            foreach (LopHoc item in danhSachLopHoc)
+            {
+                if (item.TrangThai == "Sap Khai Giang")
+                {
+                    view.DisplayLopHoc(item);
+                    timThay = true;
+                }
+            }
+
+            if (!timThay)
+            {
+                Console.WriteLine("Khong tim thay lop hoc sap khai giang");
+            }
+        }
+        public void HienThiLopDangHoc(LopHocView view)
+        {
+
+            bool timThay = false;
+
+            foreach (LopHoc item in danhSachLopHoc)
+            {
+                if (item.TrangThai == "Dang Hoc")
+                {
+                    view.DisplayLopHoc(item);
+                    timThay = true;
+                }
+            }
+
+            if (!timThay)
+            {
+                Console.WriteLine("Khong tim thay lop dang hoc");
+            }
+        }
+
+        public void XoaLopHoc()
+        {
+            Console.WriteLine();
+            Console.WriteLine("========== XOA LOP HOC ==========");
+
+            Console.Write("Nhap ma lop hoc can xoa: ");
+            string maLH = Console.ReadLine() ?? "";
+            LopHoc? lopHoc = danhSachLopHoc.FirstOrDefault(x => x.MaLop == maLH);
+
+
+            if (lopHoc == null)
+            {
+                Console.WriteLine("Khong tim thay hoc vien!");
+                return;
+            }
+            Console.Write(
+               $"Ban co chac muon xoa {lopHoc.TenLop}? (Y/N): "
+           );
+            string answer = Console.ReadLine() ?? "";
+
+            if (answer.ToUpper() != "Y")
+            {
+                Console.WriteLine("Da huy thao tac xoa.");
+                return;
+            }
+
+            danhSachLopHoc.Remove(lopHoc);
+            repository.SaveData(danhSachLopHoc);
+            Console.WriteLine(" Xoa Thanh cong");
+        }
+
     }
 }

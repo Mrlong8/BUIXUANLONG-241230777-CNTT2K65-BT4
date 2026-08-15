@@ -1,0 +1,202 @@
+[
+  {
+    "MaDangKy": "DK001",
+    "HocVien": {
+      "maHV": "HV001",
+      "hoTen": "Nguyen Van An",
+      "ngaySinh": "2005-05-12T00:00:00",
+      "phone": "0901234567",
+      "email": "an@gmail.com",
+      "diaChi": "Ha Noi",
+      "ngayDangKy": "2026-08-01T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH001",
+      "TenLop": "Lap Trinh C# Co Ban",
+      "KhoaHoc": "KH001",
+      "NgayKhaiGiang": "2026-09-01T00:00:00",
+      "LichHoc": "Thu 2, Thu 4 - 18:00",
+      "SiSoToiDa": 30,
+      "TrangThai": "Sap khai giang"
+    },
+    "NgayDangKy": "2026-08-01T00:00:00",
+    "HocPhi": 5000000,
+    "SoTienDaDong": 5000000,
+    "TrangThaiThanhToan": "Da thanh toan"
+  },
+  {
+    "MaDangKy": "DK002",
+    "HocVien": {
+      "maHV": "HV002",
+      "hoTen": "Tran Thi Binh",
+      "ngaySinh": "2004-10-20T00:00:00",
+      "phone": "0912345678",
+      "email": "binh@gmail.com",
+      "diaChi": "Ha Noi",
+      "ngayDangKy": "2026-08-03T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH001",
+      "TenLop": "Lap Trinh C# Co Ban",
+      "KhoaHoc": "KH001",
+      "NgayKhaiGiang": "2026-09-01T00:00:00",
+      "LichHoc": "Thu 2, Thu 4 - 18:00",
+      "SiSoToiDa": 30,
+      "TrangThai": "Sap khai giang"
+    },
+    "NgayDangKy": "2026-08-03T00:00:00",
+    "HocPhi": 5000000,
+    "SoTienDaDong": 3000000,
+    "TrangThaiThanhToan": "Con thieu"
+  },
+  {
+    "MaDangKy": "DK003",
+    "HocVien": {
+      "maHV": "HV003",
+      "hoTen": "Le Van Cuong",
+      "ngaySinh": "2005-02-15T00:00:00",
+      "phone": "0987654321",
+      "email": "cuong@gmail.com",
+      "diaChi": "Bac Ninh",
+      "ngayDangKy": "2026-08-05T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH002",
+      "TenLop": "Lap Trinh C# Nang Cao",
+      "KhoaHoc": "KH002",
+      "NgayKhaiGiang": "2026-08-10T00:00:00",
+      "LichHoc": "Thu 3, Thu 5 - 18:00",
+      "SiSoToiDa": 25,
+      "TrangThai": "Dang hoc"
+    },
+    "NgayDangKy": "2026-08-05T00:00:00",
+    "HocPhi": 7000000,
+    "SoTienDaDong": 4000000,
+    "TrangThaiThanhToan": "Con thieu"
+  },
+  {
+    "MaDangKy": "DK004",
+    "HocVien": {
+      "maHV": "HV004",
+      "hoTen": "Pham Thi Dung",
+      "ngaySinh": "2005-07-08T00:00:00",
+      "phone": "0971234567",
+      "email": "dung@gmail.com",
+      "diaChi": "Hai Phong",
+      "ngayDangKy": "2026-08-06T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH003",
+      "TenLop": "Lap Trinh Web ASP.NET Core",
+      "KhoaHoc": "KH003",
+      "NgayKhaiGiang": "2026-09-15T00:00:00",
+      "LichHoc": "Thu 2, Thu 4 - 18:00",
+      "SiSoToiDa": 30,
+      "TrangThai": "Sap khai giang"
+    },
+    "NgayDangKy": "2026-08-06T00:00:00",
+    "HocPhi": 8000000,
+    "SoTienDaDong": 0,
+    "TrangThaiThanhToan": "Chua thanh toan"
+  },
+  {
+    "MaDangKy": "DK005",
+    "HocVien": {
+      "maHV": "HV005",
+      "hoTen": "Hoang Van Nam",
+      "ngaySinh": "2004-12-25T00:00:00",
+      "phone": "0965432109",
+      "email": "nam@gmail.com",
+      "diaChi": "Hai Duong",
+      "ngayDangKy": "2026-08-07T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH002",
+      "TenLop": "Lap Trinh C# Nang Cao",
+      "KhoaHoc": "KH002",
+      "NgayKhaiGiang": "2026-08-10T00:00:00",
+      "LichHoc": "Thu 3, Thu 5 - 18:00",
+      "SiSoToiDa": 25,
+      "TrangThai": "Dang hoc"
+    },
+    "NgayDangKy": "2026-08-07T00:00:00",
+    "HocPhi": 7000000,
+    "SoTienDaDong": 7000000,
+    "TrangThaiThanhToan": "Da thanh toan"
+  },
+  {
+    "MaDangKy": "DK006",
+    "HocVien": {
+      "maHV": "HV006",
+      "hoTen": "Vu Thi Hoa",
+      "ngaySinh": "2005-09-18T00:00:00",
+      "phone": "0934567890",
+      "email": "hoa@gmail.com",
+      "diaChi": "Nam Dinh",
+      "ngayDangKy": "2026-08-08T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH003",
+      "TenLop": "Lap Trinh Web ASP.NET Core",
+      "KhoaHoc": "KH003",
+      "NgayKhaiGiang": "2026-09-15T00:00:00",
+      "LichHoc": "Thu 2, Thu 4 - 18:00",
+      "SiSoToiDa": 30,
+      "TrangThai": "Sap khai giang"
+    },
+    "NgayDangKy": "2026-08-08T00:00:00",
+    "HocPhi": 8000000,
+    "SoTienDaDong": 5000000,
+    "TrangThaiThanhToan": "Con thieu"
+  },
+  {
+    "MaDangKy": "DK007",
+    "HocVien": {
+      "maHV": "HV007",
+      "hoTen": "Do Van Hung",
+      "ngaySinh": "2004-03-10T00:00:00",
+      "phone": "0923456789",
+      "email": "hung@gmail.com",
+      "diaChi": "Ha Noi",
+      "ngayDangKy": "2026-08-09T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH004",
+      "TenLop": "Co So Du Lieu SQL Server",
+      "KhoaHoc": "KH004",
+      "NgayKhaiGiang": "2026-07-01T00:00:00",
+      "LichHoc": "Thu 7, Chu Nhat - 08:00",
+      "SiSoToiDa": 35,
+      "TrangThai": "Dang hoc"
+    },
+    "NgayDangKy": "2026-08-09T00:00:00",
+    "HocPhi": 4500000,
+    "SoTienDaDong": 2000000,
+    "TrangThaiThanhToan": "Con thieu"
+  },
+  {
+    "MaDangKy": "DK008",
+    "HocVien": {
+      "maHV": "HV008",
+      "hoTen": "Nguyen Thi Lan",
+      "ngaySinh": "2005-11-30T00:00:00",
+      "phone": "0918765432",
+      "email": "lan@gmail.com",
+      "diaChi": "Thai Nguyen",
+      "ngayDangKy": "2026-08-10T00:00:00"
+    },
+    "LopHoc": {
+      "MaLop": "LH005",
+      "TenLop": "Lap Trinh Python Co Ban",
+      "KhoaHoc": "KH006",
+      "NgayKhaiGiang": "2026-06-01T00:00:00",
+      "LichHoc": "Thu 3, Thu 5 - 18:00",
+      "SiSoToiDa": 30,
+      "TrangThai": "Da dong"
+    },
+    "NgayDangKy": "2026-08-10T00:00:00",
+    "HocPhi": 4000000,
+    "SoTienDaDong": 0,
+    "TrangThaiThanhToan": "Da huy"
+  }
+]

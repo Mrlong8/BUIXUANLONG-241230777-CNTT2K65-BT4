@@ -1,0 +1,98 @@
+[
+  {
+    "maKH": "KH001",
+    "nameKH": "Lap Trinh C# Co Ban",
+    "hocPhi": 5000000,
+    "thoiLuong": 30,
+    "moTa": "Khoa hoc C# co ban cho nguoi moi bat dau",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH002",
+    "nameKH": "Lap Trinh C# Nang Cao",
+    "hocPhi": 7000000,
+    "thoiLuong": 45,
+    "moTa": "Lap trinh C# nang cao va lap trinh huong doi tuong",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH003",
+    "nameKH": "ASP.NET Core Web API",
+    "hocPhi": 8000000,
+    "thoiLuong": 50,
+    "moTa": "Xay dung Web API voi ASP.NET Core va Entity Framework",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH004",
+    "nameKH": "SQL Server Co Ban",
+    "hocPhi": 4500000,
+    "thoiLuong": 25,
+    "moTa": "Hoc SQL Server tu co ban den truy van nang cao",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH005",
+    "nameKH": "SQL Server Nang Cao",
+    "hocPhi": 6500000,
+    "thoiLuong": 35,
+    "moTa": "Stored Procedure, Trigger, View va toi uu truy van",
+    "trangThai": "Tam dung"
+  },
+  {
+    "maKH": "KH006",
+    "nameKH": "Lap Trinh Python Co Ban",
+    "hocPhi": 4000000,
+    "thoiLuong": 30,
+    "moTa": "Python co ban va tu duy lap trinh",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH007",
+    "nameKH": "Lap Trinh Python Nang Cao",
+    "hocPhi": 6000000,
+    "thoiLuong": 40,
+    "moTa": "Lap trinh huong doi tuong va xu ly du lieu voi Python",
+    "trangThai": "Tam dung"
+  },
+  {
+    "maKH": "KH008",
+    "nameKH": "Java Spring Boot",
+    "hocPhi": 8500000,
+    "thoiLuong": 55,
+    "moTa": "Xay dung Backend voi Java va Spring Boot",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH009",
+    "nameKH": "JavaScript Co Ban",
+    "hocPhi": 3500000,
+    "thoiLuong": 25,
+    "moTa": "JavaScript co ban cho lap trinh Web",
+    "trangThai": "Da ket thuc"
+  },
+  {
+    "maKH": "KH010",
+    "nameKH": "ReactJS Frontend",
+    "hocPhi": 7500000,
+    "thoiLuong": 45,
+    "moTa": "Xay dung giao dien Web voi ReactJS",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH011",
+    "nameKH": "NodeJS Backend",
+    "hocPhi": 7000000,
+    "thoiLuong": 40,
+    "moTa": "Xay dung Backend va REST API voi NodeJS",
+    "trangThai": "Dang mo"
+  },
+  {
+    "maKH": "KH012",
+    "nameKH": "Unity Game Development",
+    "hocPhi": 9000000,
+    "thoiLuong": 60,
+    "moTa": "Lap trinh game 2D voi Unity va C#",
+    "trangThai": "Tam dung"
+  }
+]

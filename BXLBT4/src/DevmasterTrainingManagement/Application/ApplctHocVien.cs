@@ -138,6 +138,8 @@ namespace BXLBT4.src.DevmasterTrainingManagement.Application
             HocVien? hocVien = danhSachHocVien
                 .FirstOrDefault(x => x.maHV == maHV);
 
+            //.FirstOrDefault(...) Tìm phần tử đầu tiên thỏa mãn điều kiện.Nếu không tìm thấy thì trả về null.
+
             if (hocVien == null)
             {
                 Console.WriteLine("Khong tim thay hoc vien!");
