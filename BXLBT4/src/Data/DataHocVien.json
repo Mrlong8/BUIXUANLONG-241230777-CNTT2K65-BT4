@@ -1,0 +1,20 @@
+[
+  {
+    "maHV": "HV001",
+    "hoTen": "Nguyen Van A",
+    "ngaySinh": "2005-01-10T00:00:00",
+    "phone": "0123456789",
+    "email": "vana@gmail.com",
+    "diaChi": "Ha Noi",
+    "ngayDangKy": "2026-08-15T00:00:00"
+  },
+  {
+    "maHV": "HV002",
+    "hoTen": "Nguyen Van B",
+    "ngaySinh": "2006-05-20T00:00:00",
+    "phone": "0987654321",
+    "email": "vanb@gmail.com",
+    "diaChi": "Ha Noi",
+    "ngayDangKy": "2026-08-16T00:00:00"
+  }
+]
