@@ -1,0 +1,87 @@
+[
+  {
+    "MaChamSoc": "CS001",
+    "hocVien": {
+      "maHV": "HV001",
+      "hoTen": "Nguyen Van An",
+      "ngaySinh": "2005-05-12T00:00:00",
+      "phone": "0901234567",
+      "email": "an@gmail.com",
+      "diaChi": "Ha Noi",
+      "ngayDangKy": "2026-08-01T00:00:00"
+    },
+    "NgayChamSoc": "2026-08-10T09:00:00",
+    "KenhLienHe": "Dien thoai",
+    "NoiDung": "Goi dien hoi thăm tinh hinh hoc tap cua hoc vien.",
+    "KetQua": "Hoc vien dang hoc tap tot",
+    "NgayHenTiepTheo": "2026-08-16T10:00:00"
+  },
+  {
+    "MaChamSoc": "CS002",
+    "hocVien": {
+      "maHV": "HV002",
+      "hoTen": "Tran Thi Binh",
+      "ngaySinh": "2004-10-20T00:00:00",
+      "phone": "0912345678",
+      "email": "binh@gmail.com",
+      "diaChi": "Ha Noi",
+      "ngayDangKy": "2026-08-03T00:00:00"
+    },
+    "NgayChamSoc": "2026-08-11T14:00:00",
+    "KenhLienHe": "Zalo",
+    "NoiDung": "Trao doi ve tinh hinh thanh toan hoc phi.",
+    "KetQua": "Hoc vien cam ket thanh toan trong tuan",
+    "NgayHenTiepTheo": "2026-08-18T14:00:00"
+  },
+  {
+    "MaChamSoc": "CS003",
+    "hocVien": {
+      "maHV": "HV003",
+      "hoTen": "Le Van Cuong",
+      "ngaySinh": "2005-02-15T00:00:00",
+      "phone": "0987654321",
+      "email": "cuong@gmail.com",
+      "diaChi": "Bac Ninh",
+      "ngayDangKy": "2026-08-05T00:00:00"
+    },
+    "NgayChamSoc": "2026-08-08T10:30:00",
+    "KenhLienHe": "Email",
+    "NoiDung": "Gui tai lieu hoc tap va thong bao lich hoc.",
+    "KetQua": "Hoc vien da nhan duoc tai lieu",
+    "NgayHenTiepTheo": "2026-08-15T10:00:00"
+  },
+  {
+    "MaChamSoc": "CS004",
+    "hocVien": {
+      "maHV": "HV004",
+      "hoTen": "Pham Thi Dung",
+      "ngaySinh": "2005-07-08T00:00:00",
+      "phone": "0971234567",
+      "email": "dung@gmail.com",
+      "diaChi": "Hai Phong",
+      "ngayDangKy": "2026-08-06T00:00:00"
+    },
+    "NgayChamSoc": "2026-08-05T15:30:00",
+    "KenhLienHe": "Dien thoai",
+    "NoiDung": "Lien he de hoi ve ly do hoc vien vang mat.",
+    "KetQua": "Hoc vien ban vi cong viec",
+    "NgayHenTiepTheo": "2026-08-12T15:30:00"
+  },
+  {
+    "MaChamSoc": "CS005",
+    "hocVien": {
+      "maHV": "HV005",
+      "hoTen": "Hoang Van Nam",
+      "ngaySinh": "2004-12-25T00:00:00",
+      "phone": "0965432109",
+      "email": "nam@gmail.com",
+      "diaChi": "Hai Duong",
+      "ngayDangKy": "2026-08-07T00:00:00"
+    },
+    "NgayChamSoc": "2026-08-12T09:30:00",
+    "KenhLienHe": "Truc tiep",
+    "NoiDung": "Gap truc tiep hoc vien de tu van khoa hoc tiep theo.",
+    "KetQua": "Hoc vien quan tam khoa hoc ASP.NET Core",
+    "NgayHenTiepTheo": null
+  }
+]

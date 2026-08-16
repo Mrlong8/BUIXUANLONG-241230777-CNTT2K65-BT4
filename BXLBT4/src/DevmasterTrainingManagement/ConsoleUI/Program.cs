@@ -34,6 +34,13 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
                 );
             DangKyKhoaHocView viewdk = new DangKyKhoaHocView();
 
+            ChamSocHocVienRepository repositorycs = new ChamSocHocVienRepository();
+            AppChamSocHocVien appChamSoc =
+                new AppChamSocHocVien(
+                    repositorycs,
+                    appHocVien
+                );
+            ChamSocHocVienView viewChamSoc = new ChamSocHocVienView();
 
             DisplayMenuManage(
                     menu,
@@ -44,7 +51,9 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
                     appKhoaHoc,
                     viewkh,
                     appDangKy,
-                    viewdk
+                    viewdk,
+                    appChamSoc,
+                    viewChamSoc
              );
         }
 
@@ -56,8 +65,11 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
                 AppKhoaHoc appKhoaHoc,
                 KhoaHocView viewkh,
                 AppDangKyKhoaHoc appDangKy,
-                DangKyKhoaHocView viewdk
-            ){
+                DangKyKhoaHocView viewdk,
+                AppChamSocHocVien appChamSoc,
+                ChamSocHocVienView viewChamSoc
+            )
+        {
             int choose = -1;
 
             while (choose != 0)
@@ -87,6 +99,9 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
                     case 4:
                         QuanLyDangKyKhoaHoc(menu,appDangKy,viewdk);
                         break;
+                    case 5:
+                        QuanLyChamSocHocVien(menu,appChamSoc,viewChamSoc);
+                        break;
                     case 0:
                         Console.WriteLine("Thoat chuong trinh!");
                         break;
@@ -98,6 +113,60 @@ namespace BXLBT4.src.DevmasterTrainingManagement.ConsoleUI
             }
         }
 
+        static void QuanLyChamSocHocVien(MainMenu menu,AppChamSocHocVien appChamSoc,ChamSocHocVienView view)
+        {
+            int choose = -1;
+            view.DisplayListChamSoc(appChamSoc.GetDanhSachChamSoc());
+            while (choose != 0)
+            {
+                menu.ShowMenuChamSocHocVien();
+
+                Console.Write("Nhap lua chon: ");
+
+                while (!int.TryParse(Console.ReadLine(), out choose))
+                {
+                    Console.Write("Nhap sai! Vui long nhap so: ");
+                }
+
+                switch (choose)
+                {
+                    case 1:
+                        appChamSoc.GhiLichSuChamSoc();
+                        break;
+
+                    case 2:
+                        appChamSoc.HienThiLichSuTheoHocVien(view);
+                        break;
+
+                    case 3:
+                        appChamSoc.HienThiLichHenHomNay(view);
+                        break;
+
+                    case 4:
+                        appChamSoc.HienThiLichHenQuaHan(view);
+                        break;
+
+                    case 5:
+                        appChamSoc.ThongKeKetQuaChamSoc();
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Quay lai menu chinh...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Lua chon khong hop le!");
+                        break;
+                }
+
+                if (choose != 0)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Nhan phim bat ky de tiep tuc...");
+                    Console.ReadKey();
+                }
+            }
+        }
         static void QuanLyDangKyKhoaHoc(MainMenu menu, AppDangKyKhoaHoc appDangKy,DangKyKhoaHocView view)
         {
             int choose = -1;
