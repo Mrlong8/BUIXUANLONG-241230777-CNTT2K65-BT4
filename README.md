@@ -2,7 +2,7 @@
 
 ## 1. Giới thiệu
 
-Đây là dự án cuối kỳ môn lập trình C# với đề tài:
+Bùi Xuân Long - MSV : 241230777 - CNTT2K65
 
 **Hệ thống quản lý đào tạo DevMaster**
 
