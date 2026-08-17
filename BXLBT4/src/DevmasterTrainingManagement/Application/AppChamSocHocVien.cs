@@ -104,6 +104,7 @@ namespace BXLBT4.src.DevmasterTrainingManagement.Application
                 .Where(x => x.hocVien != null &&
                             x.hocVien.maHV == maHV)
                 .ToList();
+            //Lọc danh sách chăm sóc rồi chuyển kết quả thành List<ChamSocHocVien>.
 
             if (ketQua.Count == 0)
             {
