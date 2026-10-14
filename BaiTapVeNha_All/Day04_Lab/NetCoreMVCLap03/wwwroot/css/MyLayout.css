@@ -1,0 +1,44 @@
+﻿/* Styling Navbar Top */
+.custom-navbar {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link-custom {
+    font-weight: 500;
+    color: #4b5563 !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+    .nav-link-custom:hover {
+        color: #0d6efd !important;
+    }
+
+.btn-auth-login {
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .btn-auth-login:hover {
+        background-color: #0d6efd;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+.btn-auth-register {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    transition: all 0.3s ease;
+}
+
+    .btn-auth-register:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+        color: #fff;
+    }

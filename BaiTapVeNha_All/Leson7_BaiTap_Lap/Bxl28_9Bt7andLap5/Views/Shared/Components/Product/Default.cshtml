@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Bxl28_9Bt7andLap5.Models.DataModel.Product>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="text-danger">Giá: @item.Price VNĐ</p>
+                    <img src="~/product/@item.Image" alt="Alternate Text" width="100%" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

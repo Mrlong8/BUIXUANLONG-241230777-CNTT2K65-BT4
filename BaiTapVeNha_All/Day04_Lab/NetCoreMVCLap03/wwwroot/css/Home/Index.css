@@ -1,0 +1,76 @@
+﻿/* Styling Banner Slider */
+.banner-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.slide-gradient-1 {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.slide-gradient-2 {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.slide-gradient-3 {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.banner-slide-content {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-banner {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 12px 30px;
+}
+
+    .btn-banner:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+/* Styling phần Thống kê số liệu */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 25px 15px;
+    transition: all 0.3s ease;
+}
+
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+        border-color: #0d6efd;
+    }
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Styling Form Liên hệ */
+.contact-card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-control-custom {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+}
+
+    .form-control-custom:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    }

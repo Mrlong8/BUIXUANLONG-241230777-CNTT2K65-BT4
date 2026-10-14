@@ -1,0 +1,16 @@
+## Visual Studio / IDE
+.vs/
+.vscode/
+*.suo
+*.user
+
+## Build outputs (Biên dịch)
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+## Files chứa thông tin nhạy cảm
+appsettings*.Secret.json
+*.env
+*.pem

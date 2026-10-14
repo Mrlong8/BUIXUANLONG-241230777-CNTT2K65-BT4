@@ -1,0 +1,47 @@
+[
+  {
+    "MaLop": "LH001",
+    "TenLop": "Lap Trinh C# Co Ban",
+    "KhoaHoc": "C#",
+    "NgayKhaiGiang": "2026-09-01T08:00:00",
+    "LichHoc": "Thu 2, Thu 4, Thu 6 - 18:00",
+    "SiSoToiDa": 30,
+    "TrangThai": "Sap khai giang"
+  },
+  {
+    "MaLop": "LH002",
+    "TenLop": "Lap Trinh C# Nang Cao",
+    "KhoaHoc": "C# Advanced",
+    "NgayKhaiGiang": "2026-08-10T18:00:00",
+    "LichHoc": "Thu 3, Thu 5 - 18:00",
+    "SiSoToiDa": 25,
+    "TrangThai": "Dang hoc"
+  },
+  {
+    "MaLop": "LH003",
+    "TenLop": "Lap Trinh Web ASP.NET Core",
+    "KhoaHoc": "ASP.NET Core",
+    "NgayKhaiGiang": "2026-09-15T18:00:00",
+    "LichHoc": "Thu 2, Thu 4 - 18:00",
+    "SiSoToiDa": 30,
+    "TrangThai": "Sap khai giang"
+  },
+  {
+    "MaLop": "LH004",
+    "TenLop": "Co So Du Lieu SQL Server",
+    "KhoaHoc": "SQL Server",
+    "NgayKhaiGiang": "2026-07-01T18:00:00",
+    "LichHoc": "Thu 7, Chu Nhat - 08:00",
+    "SiSoToiDa": 35,
+    "TrangThai": "Dang hoc"
+  },
+  {
+    "MaLop": "LH005",
+    "TenLop": "Lap Trinh Python Co Ban",
+    "KhoaHoc": "Python",
+    "NgayKhaiGiang": "2026-06-01T18:00:00",
+    "LichHoc": "Thu 3, Thu 5 - 18:00",
+    "SiSoToiDa": 30,
+    "TrangThai": "Da dong"
+  }
+]

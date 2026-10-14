@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Danh sách Sản phẩm";
+    // Đảm bảo lệnh xuống dòng để không bị biến thành comment
+    int.TryParse(Context.Request.Query["catId"], out int currentCatId);
+}
+
+<div class="container mt-4">
+    <!-- Khu vực tiêu đề và nút Tạo mới -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Quản lý Sản phẩm</h2>
+        <a asp-action="Create" class="btn btn-success shadow-sm">Thêm sản phẩm mới</a>
+    </div>
+
+    <div class="row">
+        <!-- Sidebar Danh mục để lọc -->
+        <div class="col-md-3">
+            <h4 class="mb-3">Danh mục</h4>
+            <div class="list-group shadow-sm">
+                <a href="/" class="list-group-item list-group-item-action @(currentCatId == 0 ? "active" : "")">Tất cả sản phẩm</a>
+                <a href="/?catId=1" class="list-group-item list-group-item-action @(currentCatId == 1 ? "active" : "")">Đồ điện tử (ID=1)</a>
+                <a href="/?catId=2" class="list-group-item list-group-item-action @(currentCatId == 2 ? "active" : "")">Thời trang (ID=2)</a>
+            </div>
+        </div>
+
+        <!-- Khu vực hiển thị Sản phẩm gọi từ ViewComponent -->
+        <div class="col-md-9">
+            <!-- Lưu ý: Nếu bạn đang đặt folder là Product thì giữ nguyên chữ "Product", nếu là ProductList thì đổi lại nhé -->
+            @await Component.InvokeAsync("Product", new { catId = currentCatId })
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿/* Card sản phẩm */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+    .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+    }
+
+/* Khung chứa ảnh */
+.product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    background-color: #f8f9fa;
+}
+
+    .product-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.product-card:hover .product-img-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Badge giảm giá */
+.badge-sale {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(255, 65, 108, 0.4);
+    z-index: 2;
+}
+
+/* Giá sản phẩm */
+.price-current {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #d9534f;
+}
+
+.price-old {
+    font-size: 0.875rem;
+    color: #8c8c8c;
+    text-decoration: line-through;
+    margin-left: 6px;
+}
+
+/* Nút bấm */
+.btn-custom-outline {
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    transition: all 0.2s ease;
+}
+
+    .btn-custom-outline:hover {
+        background-color: #0d6efd;
+        color: #fff;
+    }

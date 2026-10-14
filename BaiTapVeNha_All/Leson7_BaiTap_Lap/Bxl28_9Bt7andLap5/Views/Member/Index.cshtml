@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Bxl28_9Bt7andLap5.Models.DataModel.Member>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">Danh sách thành viên</h2>
+        <a asp-action="Create" class="btn btn-success">
+            <i class="bi bi-person-plus-fill"></i> Thêm thành viên mới
+        </a>
+    </div>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info text-center" role="alert">
+            Chưa có thành viên nào trong danh sách. Hãy nhấn nút <strong>"Thêm thành viên mới"</strong> để bắt đầu!
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Mã thành viên</th>
+                        <th scope="col">Tên đăng nhập</th>
+                        <th scope="col">Họ và tên</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Số điện thoại</th>
+                        <th scope="col">Ngày sinh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int stt = 1; }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold text-center">@(stt++)</td>
+                            <td><code>@item.MenberId</code></td>
+                            <td>@item.UserName</td>
+                            <td class="fw-bold">@item.FullName</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
+                            <td>@item.BirthDay.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

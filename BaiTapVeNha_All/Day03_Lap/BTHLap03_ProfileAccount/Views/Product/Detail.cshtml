@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model BTHLap03_ProfileAccount.Models.Product
+
+@{
+    ViewData["Title"] = "Chi tiết " + Model.Name;
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="@Url.Content(Model.Image)" class="img-fluid rounded" alt="@Model.Name" />
+        </div>
+        <div class="col-md-7">
+            <h2>@Model.Name</h2>
+            <p class="text-muted">Mã sản phẩm: @Model.Id</p>
+
+            <div class="my-3">
+                @if (Model.SalePrice > 0 && Model.SalePrice < Model.Price)
+                {
+                    <h3 class="text-danger fw-bold d-inline me-2">@Model.SalePrice.ToString("N0") đ</h3>
+                    <span class="text-decoration-line-through text-muted">@Model.Price.ToString("N0") đ</span>
+                }
+                else
+                {
+                    <h3 class="text-primary fw-bold">@Model.Price.ToString("N0") đ</h3>
+                }
+            </div>
+
+            <p><strong>Mô tả:</strong> @Model.Description</p>
+            <p><strong>Ngày tạo:</strong> @Model.CreateAt.ToString("dd/MM/yyyy")</p>
+
+            <a asp-action="Index" class="btn btn-secondary mt-3">Quay lại danh sách</a>
+        </div>
+    </div>
+</div>

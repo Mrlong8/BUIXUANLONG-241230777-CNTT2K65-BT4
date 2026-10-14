@@ -1,0 +1,73 @@
+﻿@model Bxl28_9Bt7andLap5.Models.DataModel.Product
+@{
+    ViewData["Title"] = "Thêm Sản phẩm";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Thêm Sản phẩm mới</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- BẮT BUỘC PHẢI CÓ enctype="multipart/form-data" ĐỂ UPLOAD FILE -->
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Id" class="control-label fw-bold">Mã sản phẩm</label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="control-label fw-bold">Tên sản phẩm</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <!-- ComboBox chọn Danh mục -->
+                <div class="form-group mb-3">
+                    <label asp-for="CategoryId" class="control-label fw-bold">Thuộc Danh mục</label>
+                    <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.Categories">
+                        <option value="">-- Chọn danh mục --</option>
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Price" class="control-label fw-bold">Giá gốc (VNĐ)</label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="SalePrice" class="control-label fw-bold">Giá khuyến mãi (VNĐ)</label>
+                    <input asp-for="SalePrice" class="form-control" />
+                    <span asp-validation-for="SalePrice" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label fw-bold">Mô tả sản phẩm</label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <!-- Input chọn File ảnh -->
+                <div class="form-group mb-4">
+                    <label class="control-label fw-bold">Hình ảnh sản phẩm</label>
+                    <input type="file" name="imageFile" class="form-control" accept="image/*" required />
+                    @Html.ValidationMessage("Image", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary px-4">Lưu sản phẩm</button>
+                    <a asp-action="Index" class="btn btn-secondary ms-2">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

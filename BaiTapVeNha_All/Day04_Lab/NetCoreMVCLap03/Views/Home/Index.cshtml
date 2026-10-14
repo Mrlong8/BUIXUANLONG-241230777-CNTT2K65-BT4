@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/Home/Index.css" rel="stylesheet" />
+
+<div class="container my-4">
+    <!-- 1. BANNER SLIDE -->
+    <partial name="~/Views/Shared/Home/Banner.cshtml" />
+
+    <!-- 2. PHẦN SỐ LIỆU DOANH SỐ -->
+    <partial name="~/Views/Shared/Home/SoLieu.cshtml" />
+    
+    <div>
+        <button id="loadAjax" class="btn btn-primary">Load Books</button>
+        <hr />
+        <div id="data-form-ajax">Loading...</div>
+    </div>
+  
+        
+    <!-- 3. PHẦN LIÊN HỆ VỚI CHÚNG TÔI -->
+    <partial name="~/Views/Shared/Home/Contacts.cshtml" />
+</div>
+
+@section Scripts {
+    <script src="~/js/Home/Index.js"></script>
+
+}

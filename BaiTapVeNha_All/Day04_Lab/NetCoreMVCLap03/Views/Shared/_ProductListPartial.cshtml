@@ -1,0 +1,15 @@
+﻿@model IEnumerable<NetCoreMVCLap03.Models.Product>
+
+<div class="row row-cols-1 row-cols-md-3 g-3">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100 text-center border p-2 shadow-sm">
+                <img src="@item.Image" class="card-img-top img-fluid" style="height:150px; object-fit:contain;" alt="@item.Name">
+                <div class="card-body px-1 py-2">
+                    <h6 class="card-title text-truncate mb-0">@item.Name</h6>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,25 @@
+﻿/* Cố định kích thước ảnh và chống biến dạng */
+.account-card img {
+    width: 100%;
+    height: 220px; /* Cố định chiều cao ảnh */
+    object-fit: cover; /* Tự động cắt tỉa ảnh vừa khung mà không bị méo */
+    object-position: center; /* Căn giữa bức ảnh */
+}
+
+/* Đồng bộ chiều cao giữa các khung thumbnail */
+.account-card {
+    margin-bottom: 30px;
+}
+
+    .account-card .thumbnail {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .account-card .caption {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }

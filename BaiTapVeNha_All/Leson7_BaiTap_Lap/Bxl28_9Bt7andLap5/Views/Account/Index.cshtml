@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Bxl28_9Bt7andLap5.Models.DataModel.Account>
+@{
+	ViewData["Title"] = "Danh Sách thành viên";
+}
+
+<div class="container mt-4">
+	<div class="d-flex justify-content-between align-items-center mb-4">
+		<h2>Danh sách tài khoản</h2>
+		<a asp-action="Create" class="btn btn-success"> Thêm thành viên</a>
+	</div>
+	
+	<div >
+		<table class="table table-bordered table-striped table-hover align-middle mb-0">
+			<thead class="table text-center">
+				<tr>
+					<th>Id</th>
+					<th>Họ Tên</th>
+					<th>Email</th>
+					<th>SDT</th>
+					<th>Địa chỉ thường trú</th>
+					<th>Ảnh đại diện</th>
+					<th>Ngày sinh </th>
+					<th>Giới Tính </th>
+					<th>mật Khẩu</th>
+					<th>link facebook  </th>
+
+				</tr>
+			</thead>
+			<tbody>
+				@foreach(var item in Model)
+				{
+					<tr>
+				
+						<td><code>@item.Id</code></td>
+						<td>@item.FullName</td>
+						<td >@item.Email</td>
+						<td>@item.Phone</td>
+						<td>@item.Address</td>
+						<td>@item.Avatar</td>
+						<td>@item.Birthday.ToString("dd/MM/yyyy")</td>
+						<td>@item.Gender</td>
+						<td>@item.Password</td>
+						<td>@item.Facebook</td>
+
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+
+</div>
+

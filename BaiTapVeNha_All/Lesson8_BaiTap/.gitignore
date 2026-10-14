@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+# bỏ qua thư mục
+
+# ASP.NET Core
+
+#**/          → tìm ở mọi thư mục
+# User-specific files
+*.user
+*.rsuser
+*.suo
+
+# Logs
+*.log 
+# tất cả các file nào có đuôi .log là bỏ qua hết
+#  touch .gitignore là tạo file git .gitignore
+# OS
+.DS_Store
+Thumbs.db

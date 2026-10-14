@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div id="homeBannerCarousel" class="carousel slide banner-container mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#homeBannerCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#homeBannerCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#homeBannerCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active" data-bs-interval="3000">
+            <div class="p-5 text-center text-white banner-slide-content slide-gradient-1">
+                <h1 class="display-4 fw-bold mb-3">Khám Phá Thư Viện Sách Tri Thức</h1>
+                <p class="lead mb-4 opacity-90">Hàng ngàn đầu sách thuộc nhiều thể loại đa dạng sẵn sàng phục vụ bạn.</p>
+                <a asp-controller="Book" asp-action="Index" class="btn btn-light text-primary btn-banner rounded-pill">Xem Danh Sách Sách</a>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item" data-bs-interval="3000">
+            <div class="p-5 text-center text-white banner-slide-content slide-gradient-2">
+                <h1 class="display-4 fw-bold mb-3">Ưu Đãi Lập Trình Viên .NET Core</h1>
+                <p class="lead mb-4 opacity-90">Cập nhật liên tục các đầu sách C#, Web MVC và API hiện đại nhất.</p>
+                <a asp-controller="Book" asp-action="Index" class="btn btn-light text-success btn-banner rounded-pill">Khám Phá Ngay</a>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item" data-bs-interval="3000">
+            <div class="p-5 text-center text-white banner-slide-content slide-gradient-3">
+                <h1 class="display-4 fw-bold mb-3">Kết Nối & Chia Sẻ Đam Mê</h1>
+                <p class="lead mb-4 opacity-90">Gia nhập cộng đồng đọc sách và nhận tư vấn trực tiếp từ ban quản trị.</p>
+                <a href="#contact-section" class="btn btn-warning text-dark btn-banner rounded-pill">Liên Hệ Với Chúng Tôi</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#homeBannerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homeBannerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>

@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<BXLBaiThucHanhLap1.Models.Product>
+
+
+<!-- Banner -->
+<section class="bg-light py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h1 class="display-5 fw-bold">
+                    Chào mừng đến với MyShop
+                </h1>
+
+                <p class="lead text-muted">
+                    Khám phá những sản phẩm chất lượng với mức giá tốt nhất.
+                </p>
+
+                <a href="#products" class="btn btn-primary">
+                    Xem sản phẩm
+                </a>
+
+            </div>
+
+
+            <div class="col-md-6 text-center">
+
+                <img src="../img/Products/baner.jpg"
+                     class="img-fluid rounded"
+                     alt="Banner">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Products -->
+<section id="products" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Sản phẩm nổi bật
+            </h2>
+
+            <p class="text-muted">
+                Một số sản phẩm được nhiều khách hàng lựa chọn
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            @foreach (var product in Model)
+            {
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <!-- Ảnh sản phẩm -->
+                        <img src="@product.Image"
+                             class="card-img-top"
+                             alt="@product.Name">
+
+
+                        <div class="card-body">
+
+                            <!-- Tên -->
+                            <h5 class="card-title">
+                                @product.Name
+                            </h5>
+
+
+                            <!-- Mô tả -->
+                            <p class="card-text text-muted">
+                                Sản phẩm chất lượng cao.
+                            </p>
+
+
+                            <!-- Giá -->
+                            <h5 class="text-danger">
+                                @product.Price.ToString("N0") Đ
+                            </h5>
+
+
+                            <!-- Add to cart -->
+                            <form asp-controller="Product"
+                                  asp-action="AddToCart"
+                                  method="post">
+
+                                      @* <input type="hidden" asp-for="Id" /> *@
+                                <input type="hidden"
+                                       name="id"
+                                       value="@product.Id" />
+
+                                <button type="submit"
+                                        class="btn btn-primary w-100 mt-2">
+
+                                    Thêm vào giỏ
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	ViewData["Title"] = "Edit";
+}
+@model NetCoreMVCLap03.Models.Book
+
+<h2>Chỉnh Sửa sách</h2>
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+	<div class="form-group">
+		<label asp-for="Title" class="control-label">Tên Sách</label>
+		<input type="text" asp-for="Title" class="form-control" placeholder="Tên Sách" />
+		@* <span asp-validation-for="Title" class="text-danger"></span>  hiển thị thông báo lỗi khi validation *@
+	</div>
+	<div class="form-group">
+		<label asp-for="AuthorId" class="control-label">Tác giả</label>
+		<select asp-for="AuthorId" class="form-control" asp-items="@ViewBag.authors">
+			<option>Chọn Tác giả</option>
+		</select>
+
+	</div>
+	<div class="form-group">
+		<label asp-for="GenreId" class="control-label">Thể loại</label>
+		<select asp-for="GenreId" class="form-control" asp-items="@ViewBag.genres">
+			<option>Chọn Thể loại</option>
+		</select>
+
+	</div>
+	<div class="form-group">
+		<label asp-for="Price" class="control-label">Giá Sách</label>
+		<input type="text" asp-for="Price" class="form-control" placeholder="Giá Sách" />
+	</div>
+	<div class="form-group">
+		<label asp-for="TotalPage" class="control-label">Tổng Số Trang</label>
+		<input type="text" asp-for="TotalPage" class="form-control" placeholder="Số Trang" />
+	</div>
+	<div class="form-group">
+		<label asp-for="Image" class="control-label">Hình Ảnh</label>
+		<input type="file" asp-for="Image" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label asp-for="Sumary" class="control-label">Giới Thiệu</label>
+		<textarea asp-for="Sumary" class="form-control" placeholder="Giới Thiệu"></textarea>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Save</button>
+	</div>
+</form>

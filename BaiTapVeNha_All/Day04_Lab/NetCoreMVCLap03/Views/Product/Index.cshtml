@@ -1,0 +1,44 @@
+﻿@model IEnumerable<NetCoreMVCLap03.Models.Product>
+
+@{
+    ViewData["Title"] = "Sản phẩm";
+    var categories = ViewBag.Catalogs as List<NetCoreMVCLap03.Models.Catalog>;
+}
+
+<div class="container my-4">
+    <div class="row">
+        <!-- CỘT BÊN TRÁI: DANH MỤC SẢN PHẨM (LOAD TỪ PARTIAL VIEW) -->
+        <div class="col-md-3">
+            <partial name="_CategoryPartial" model="categories" />
+
+            <!-- Banner quảng cáo phía dưới danh mục -->
+            <div class="card border-0 overflow-hidden shadow-sm mt-3">
+                <img src="/images/products/banner-left.jpg" class="img-fluid" alt="Quảng cáo" />
+            </div>
+        </div>
+
+        <div class="col-md-9">
+
+            <!-- KHỐI 1: SẢN PHẨM MỚI NHẤT  -->
+            <div class="card mb-4 border-primary">
+                <div class="card-header bg-primary text-white fw-bold">
+                    Sản phẩm mới nhất
+                </div>
+                <div class="card-body">
+                    <partial name="_ProductListPartial" model="Model" />
+                </div>
+            </div>
+
+            <!-- KHỐI 2: SẢN PHẨM KHÁC (LOAD TỪ VIEW COMPONENT) -->
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white fw-bold">
+                    Sản phẩm nổi bật (View Component)
+                </div>
+                <div class="card-body">
+                    @await Component.InvokeAsync("Product")
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

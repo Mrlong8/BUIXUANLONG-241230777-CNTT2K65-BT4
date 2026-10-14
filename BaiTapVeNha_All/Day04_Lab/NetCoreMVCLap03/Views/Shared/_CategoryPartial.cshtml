@@ -1,0 +1,15 @@
+﻿@model IEnumerable<NetCoreMVCLap03.Models.Catalog>
+
+<div class="card border-primary mb-3">
+    <div class="card-header bg-primary text-white fw-bold">
+        Danh mục sản phẩm
+    </div>
+    <ul class="list-group list-group-flush">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item">
+                <a href="#" class="text-decoration-none text-dark d-block">@item.Name</a>
+            </li>
+        }
+    </ul>
+</div>

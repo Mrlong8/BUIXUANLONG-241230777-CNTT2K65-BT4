@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ThanhVien>
+<a asp-action="Create" class="btn btn-primary">Create Thành Viên</a>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Mã</th>
+			<th>Họ tên</th>
+			<th>Tên đăng nhập</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var s in Model)
+		{
+			<tr>
+				<td>@s.maTV</td>
+				<td>@s.name</td>
+				<td>@s.tenDN</td>
+				<td>@s.email</td>
+			</tr>
+		}
+	</tbody>
+</table>

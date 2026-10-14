@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    ViewData["Title"] = "Profile";
+
+}
+@model BTHLap03_ProfileAccount.Models.Account
+
+<link rel="stylesheet" href="~/css/Profile.css" />
+
+<div class="profile-card">
+    <!-- Phần Avatar & Tên -->
+    <div class="profile-header">
+        <img src="@Url.Content(Model.Avatar)" alt="@Model.Name" class="profile-avatar" />
+        <h3 class="mb-1 font-weight-bold">@Model.Name</h3>
+        <p class="text-muted mb-0">ID Tài khoản: @Model.Id</p>
+    </div>
+
+    <!-- Phần Thông tin chi tiết -->
+    <div class="profile-body">
+        <h4 class="mb-3 text-success font-weight-bold">
+            Thông tin tài khoản
+        </h4>
+
+        <table class="table table-bordered profile-info-table">
+            <tbody>
+                <tr>
+                    <th style="width: 30%;">Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th>Số điện thoại</th>
+                    <td>@Model.Phone</td>
+                </tr>
+                <tr>
+                    <th>Giới tính</th>
+                    <td>
+                        @if (Model.Gender == 1)
+                        {
+                            <span class="badge bg-primary-subtle text-primary px-3 py-2">Nam</span>
+                        }
+                        else if (Model.Gender == 0)
+                        {
+                            <span class="badge bg-primary-subtle text-primary px-3 py-2">Nữ</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-primary-subtle text-primary px-3 py-2">Khác</span>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ngày sinh</th>
+                    <td>@Model.Birthday.ToString("dd/MM/yyyy")</td>
+                </tr>
+                <tr>
+                    <th>Địa chỉ</th>
+                    <td>@Model.Address</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bio / Tiểu sử -->
+        <div class="mt-4">
+            <h5 class="font-weight-bold text-secondary">Giới thiệu bản thân</h5>
+            <div class="bio-box">
+                @(string.IsNullOrEmpty(Model.Bio) ? "Chưa có thông tin giới thiệu." : Model.Bio)
+            </div>
+        </div>
+
+        <!-- Nút quay lại -->
+        <div class="mt-4 text-center">
+            <a asp-action="Index" class="btn btn-outline-secondary px-4">
+                Quay lại danh sách
+            </a>
+        </div>
+    </div>
+</div>

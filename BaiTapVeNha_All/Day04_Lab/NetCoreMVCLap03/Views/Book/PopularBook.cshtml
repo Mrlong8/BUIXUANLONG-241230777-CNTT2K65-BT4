@@ -1,0 +1,16 @@
+﻿@model IEnumerable<NetCoreMVCLap03.Models.Book>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mb-3">
+            <div class="card h-100 p-2 shadow-sm">
+                <img src="@item.Image" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="@item.Title" />
+                <div class="card-body px-0 text-center">
+                    <h5 class="card-title text-truncate">@item.Title</h5>
+                    <p class="card-text text-danger fw-bold">@item.Price.ToString("N0") VNĐ</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

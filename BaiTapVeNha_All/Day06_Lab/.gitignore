@@ -1,0 +1,17 @@
+.vs/
+*.user
+*.suo
+
+bin/
+obj/
+
+**wwwroot/lib/
+
+*.user
+*.rsuser
+*.suo
+
+*.log 
+
+.DS_Store
+Thumbs.db
